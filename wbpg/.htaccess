@@ -1,7 +1,8 @@
-# HTTPS 강제 리다이렉트
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# HTTPS 강제 리다이렉트 (SSL이 활성화된 경우에만 작동)
+# SSL 인증서가 활성화되면 아래 주석을 해제하세요
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # 보안 헤더 추가
 <IfModule mod_headers.c>
